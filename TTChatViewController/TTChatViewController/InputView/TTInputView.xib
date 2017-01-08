@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TTInputView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="271-Ra-d1m" userLabel="BottomView">
+                    <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="bUV-YQ-Yv9"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSz-ND-DUL" userLabel="inputBarView">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdz-am-sMb" userLabel="voice" customClass="StateButton">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="QyK-pm-GRD"/>
+                                <constraint firstAttribute="height" constant="35" id="jsw-Vs-Mw1"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="chat_ToolViewInputVoice"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state1Image" value="chat_ToolViewInputVoice"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state1ImageHL" value="chat_ToolViewInputVoiceHL"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="state1Name" value="keyboard"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state2Image" value="chat_ToolViewKeyboard"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state2ImageHL" value="chat_ToolViewKeyboardHL"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="state2Name" value="voice"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzX-rp-nG3" userLabel="emoji" customClass="StateButton">
+                            <state key="normal" backgroundImage="chat_ToolViewEmotion"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state1Image" value="chat_ToolViewEmotion"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state1ImageHL" value="chat_ToolViewEmotionHL"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="state1Name" value="keyboard"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state2Image" value="chat_ToolViewKeyboard"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state2ImageHL" value="chat_ToolViewKeyboardHL"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="state2Name" value="emoji"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9F-ib-Oqo" userLabel="more" customClass="StateButton">
+                            <state key="normal" backgroundImage="chat_ToolViewMore"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state1Image" value="chat_ToolViewMore"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state1ImageHL" value="chat_ToolViewMoreHL"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="state1Name" value="keyboard"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state2Image" value="chat_ToolViewKeyboard"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="state2ImageHL" value="chat_ToolViewKeyboardHL"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="state2Name" value="more"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="  " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ANU-Oq-WHV" customClass="JSQMessagesComposerTextView">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="o7Y-PW-8Xb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zus-R0-Jog" customClass="TTRecordButton">
+                            <state key="normal" title="录音">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.90980392160000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="pdz-am-sMb" secondAttribute="bottom" constant="7" id="5fv-RN-KG5"/>
+                        <constraint firstAttribute="height" constant="49" id="6Sv-AM-A2K"/>
+                        <constraint firstItem="TzX-rp-nG3" firstAttribute="centerY" secondItem="pdz-am-sMb" secondAttribute="centerY" id="8u9-XJ-QmE"/>
+                        <constraint firstItem="TzX-rp-nG3" firstAttribute="width" secondItem="pdz-am-sMb" secondAttribute="width" id="JBu-ZN-fBm"/>
+                        <constraint firstItem="N9F-ib-Oqo" firstAttribute="width" secondItem="pdz-am-sMb" secondAttribute="width" id="JR4-Av-zt4"/>
+                        <constraint firstItem="zus-R0-Jog" firstAttribute="leading" secondItem="pdz-am-sMb" secondAttribute="trailing" constant="5" id="LUi-J8-lg2"/>
+                        <constraint firstAttribute="trailing" secondItem="N9F-ib-Oqo" secondAttribute="trailing" constant="8" id="M7a-Z2-c3c"/>
+                        <constraint firstItem="N9F-ib-Oqo" firstAttribute="centerY" secondItem="pdz-am-sMb" secondAttribute="centerY" id="MJG-w4-NTT"/>
+                        <constraint firstItem="zus-R0-Jog" firstAttribute="height" secondItem="ANU-Oq-WHV" secondAttribute="height" id="MLb-tP-4IS"/>
+                        <constraint firstAttribute="bottom" secondItem="ANU-Oq-WHV" secondAttribute="bottom" constant="8" id="YFS-rZ-dIq"/>
+                        <constraint firstItem="pdz-am-sMb" firstAttribute="leading" secondItem="KSz-ND-DUL" secondAttribute="leading" constant="8" id="cUZ-m3-fCR"/>
+                        <constraint firstItem="N9F-ib-Oqo" firstAttribute="leading" secondItem="TzX-rp-nG3" secondAttribute="trailing" constant="5" id="cqy-Mh-QNh"/>
+                        <constraint firstItem="TzX-rp-nG3" firstAttribute="leading" secondItem="ANU-Oq-WHV" secondAttribute="trailing" constant="5" id="hq6-eb-pWU"/>
+                        <constraint firstItem="TzX-rp-nG3" firstAttribute="leading" secondItem="zus-R0-Jog" secondAttribute="trailing" constant="5" id="icA-BO-6tE"/>
+                        <constraint firstItem="N9F-ib-Oqo" firstAttribute="height" secondItem="pdz-am-sMb" secondAttribute="height" id="okJ-oP-DCd"/>
+                        <constraint firstItem="TzX-rp-nG3" firstAttribute="height" secondItem="pdz-am-sMb" secondAttribute="height" id="q7a-0b-tlk"/>
+                        <constraint firstItem="ANU-Oq-WHV" firstAttribute="leading" secondItem="pdz-am-sMb" secondAttribute="trailing" constant="5" id="svb-YT-jZn"/>
+                        <constraint firstItem="zus-R0-Jog" firstAttribute="centerY" secondItem="ANU-Oq-WHV" secondAttribute="centerY" id="xzy-pt-F7t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KSz-ND-DUL" secondAttribute="trailing" id="CQm-eG-7VJ"/>
+                <constraint firstItem="KSz-ND-DUL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KUW-ja-mYV"/>
+                <constraint firstAttribute="trailing" secondItem="271-Ra-d1m" secondAttribute="trailing" id="TvG-a6-7eB"/>
+                <constraint firstAttribute="bottom" secondItem="271-Ra-d1m" secondAttribute="bottom" id="dss-7b-oQb"/>
+                <constraint firstItem="271-Ra-d1m" firstAttribute="top" secondItem="KSz-ND-DUL" secondAttribute="bottom" id="ncl-ih-3qA"/>
+                <constraint firstItem="271-Ra-d1m" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yoi-Ig-pQH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomView" destination="271-Ra-d1m" id="gbv-RT-8sH"/>
+                <outlet property="bottomViewHeightConstraint" destination="bUV-YQ-Yv9" id="ZRZ-bb-waf"/>
+                <outlet property="emojiButton" destination="TzX-rp-nG3" id="P5S-Ca-9if"/>
+                <outlet property="inputBarHeightConstraint" destination="6Sv-AM-A2K" id="rEV-rw-6F0"/>
+                <outlet property="inputBarView" destination="KSz-ND-DUL" id="OtM-65-CIJ"/>
+                <outlet property="moreButton" destination="N9F-ib-Oqo" id="C55-8q-3Eu"/>
+                <outlet property="recButton" destination="zus-R0-Jog" id="8Db-Ja-vlC"/>
+                <outlet property="textView" destination="ANU-Oq-WHV" id="E74-q2-VGy"/>
+                <outlet property="textViewBottomConstraint" destination="YFS-rZ-dIq" id="izg-Pp-8TP"/>
+                <outlet property="voiceButton" destination="pdz-am-sMb" id="kHR-C6-jFN"/>
+            </connections>
+            <point key="canvasLocation" x="31.5" y="417.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chat_ToolViewEmotion" width="35" height="35"/>
+        <image name="chat_ToolViewEmotionHL" width="35" height="35"/>
+        <image name="chat_ToolViewInputVoice" width="35" height="35"/>
+        <image name="chat_ToolViewInputVoiceHL" width="35" height="35"/>
+        <image name="chat_ToolViewKeyboard" width="35" height="35"/>
+        <image name="chat_ToolViewKeyboardHL" width="35" height="35"/>
+        <image name="chat_ToolViewMore" width="35" height="35"/>
+        <image name="chat_ToolViewMoreHL" width="35" height="35"/>
+    </resources>
+</document>

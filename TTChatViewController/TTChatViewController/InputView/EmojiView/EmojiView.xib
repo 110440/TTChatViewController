@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EmojiView">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="193"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5Vt-AC-l3l">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Z0-07-139">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="EuD-lu-ymh">
+                    <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXI-io-jO6">
+                    <color key="backgroundColor" red="0.52022451160000005" green="0.85338056090000003" blue="0.98739677670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="uYJ-rI-ebQ"/>
+                    </constraints>
+                    <state key="normal" title="发送">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onSendButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mq6-JS-xDZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="AXI-io-jO6" firstAttribute="top" secondItem="5Vt-AC-l3l" secondAttribute="bottom" id="4TP-fG-UFp"/>
+                <constraint firstItem="EuD-lu-ymh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BS4-iC-m1h"/>
+                <constraint firstAttribute="trailing" secondItem="5Vt-AC-l3l" secondAttribute="trailing" id="CVE-zm-ohP"/>
+                <constraint firstAttribute="bottom" secondItem="EuD-lu-ymh" secondAttribute="bottom" id="Mpd-GA-5EJ"/>
+                <constraint firstItem="EuD-lu-ymh" firstAttribute="top" secondItem="5Vt-AC-l3l" secondAttribute="bottom" id="bGG-eQ-WXp"/>
+                <constraint firstAttribute="trailing" secondItem="AXI-io-jO6" secondAttribute="trailing" id="cuf-Qx-zbe"/>
+                <constraint firstItem="5Vt-AC-l3l" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dT2-MY-u0g"/>
+                <constraint firstItem="5Vt-AC-l3l" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hjW-t5-ASv"/>
+                <constraint firstAttribute="bottom" secondItem="AXI-io-jO6" secondAttribute="bottom" id="j1N-eJ-trp"/>
+                <constraint firstAttribute="trailing" secondItem="EuD-lu-ymh" secondAttribute="trailing" id="odI-Gi-Fwo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="5Vt-AC-l3l" id="rCS-RX-jpX"/>
+                <outlet property="pageCtl" destination="EuD-lu-ymh" id="Ipu-sU-cog"/>
+            </connections>
+            <point key="canvasLocation" x="18" y="87.5"/>
+        </view>
+    </objects>
+</document>

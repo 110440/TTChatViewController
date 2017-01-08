@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="EmojiCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9o0-UJ-H6f">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4US-nJ-RbY"/>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9o0-UJ-H6f" secondAttribute="trailing" id="3Dl-JM-Ggc"/>
+                <constraint firstAttribute="trailing" secondItem="4US-nJ-RbY" secondAttribute="trailing" id="9V9-gj-RkV"/>
+                <constraint firstItem="4US-nJ-RbY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BSK-SX-9AT"/>
+                <constraint firstItem="9o0-UJ-H6f" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Enn-iF-aEZ"/>
+                <constraint firstAttribute="bottom" secondItem="4US-nJ-RbY" secondAttribute="bottom" id="cuS-GD-2ld"/>
+                <constraint firstAttribute="bottom" secondItem="9o0-UJ-H6f" secondAttribute="bottom" id="ePZ-LE-LHh"/>
+                <constraint firstItem="4US-nJ-RbY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="itb-Ua-SIC"/>
+                <constraint firstItem="9o0-UJ-H6f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nu0-3r-ryk"/>
+            </constraints>
+            <connections>
+                <outlet property="emojiText" destination="9o0-UJ-H6f" id="k0i-Sf-q9G"/>
+                <outlet property="imageView" destination="4US-nJ-RbY" id="203-KT-p1D"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

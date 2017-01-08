@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D407A7AF1E21E28D0089F7CB /* EmojiPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407A7AD1E21E28D0089F7CB /* EmojiPageCell.m */; };
+		D407A7B01E21E28D0089F7CB /* EmojiPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407A7AE1E21E28D0089F7CB /* EmojiPageCell.xib */; };
+		D407A7B41E21E29C0089F7CB /* EmojiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407A7B21E21E29C0089F7CB /* EmojiCell.m */; };
+		D407A7B51E21E29C0089F7CB /* EmojiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407A7B31E21E29C0089F7CB /* EmojiCell.xib */; };
+		D407A7B81E21E7FA0089F7CB /* EmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = D407A7B71E21E7FA0089F7CB /* EmojiView.m */; };
+		D407A7BA1E21E8050089F7CB /* EmojiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407A7B91E21E8050089F7CB /* EmojiView.xib */; };
+		D40EC2B51DFD0D990096AE96 /* TTRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D40EC2B41DFD0D990096AE96 /* TTRecordButton.m */; };
+		D410536B1DFE4E1400E65C61 /* BubbleImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D410535A1DFE4E1400E65C61 /* BubbleImageItem.m */; };
+		D410536C1DFE4E1400E65C61 /* BubbleTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D410535D1DFE4E1400E65C61 /* BubbleTextItem.m */; };
+		D410536D1DFE4E1400E65C61 /* BubbleVideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D410535F1DFE4E1400E65C61 /* BubbleVideoItem.m */; };
+		D410536E1DFE4E1400E65C61 /* BubbleVoiceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D41053611DFE4E1400E65C61 /* BubbleVoiceItem.m */; };
+		D410536F1DFE4E1400E65C61 /* TTChatBubbleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D41053641DFE4E1400E65C61 /* TTChatBubbleCell.m */; };
+		D41053711DFE4E1400E65C61 /* TTBubbleCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D410536A1DFE4E1400E65C61 /* TTBubbleCellModel.m */; };
+		D41053741DFE581500E65C61 /* TTChatBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D41053731DFE581500E65C61 /* TTChatBaseCell.m */; };
+		D4111B7F1DFC3CE700528491 /* AudioPlayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4111B741DFC3CE700528491 /* AudioPlayHelper.m */; };
+		D4111B801DFC3CE700528491 /* CameraHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4111B761DFC3CE700528491 /* CameraHelper.m */; };
+		D4111B811DFC3CE700528491 /* ChatViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4111B781DFC3CE700528491 /* ChatViewHelper.m */; };
+		D4111B821DFC3CE700528491 /* LocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4111B7A1DFC3CE700528491 /* LocationHelper.m */; };
+		D4111B831DFC3CE700528491 /* VocieCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D4111B7C1DFC3CE700528491 /* VocieCache.m */; };
+		D4111B841DFC3CE700528491 /* VoiceRecordHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4111B7E1DFC3CE700528491 /* VoiceRecordHelper.m */; };
+		D413C91B1DFD31D200407258 /* RecordIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D413C9191DFD31D200407258 /* RecordIndicatorView.m */; };
+		D413C91C1DFD31D200407258 /* RecordIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D413C91A1DFD31D200407258 /* RecordIndicatorView.xib */; };
+		D4850F1B1E211D9D007CE9EB /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = D4850F1A1E211D9D007CE9EB /* emoji.json */; };
+		D4CFA13C1DFBCF5A00878B62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA13B1DFBCF5A00878B62 /* main.m */; };
+		D4CFA13F1DFBCF5A00878B62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA13E1DFBCF5A00878B62 /* AppDelegate.m */; };
+		D4CFA1421DFBCF5A00878B62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA1411DFBCF5A00878B62 /* ViewController.m */; };
+		D4CFA1451DFBCF5A00878B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4CFA1431DFBCF5A00878B62 /* Main.storyboard */; };
+		D4CFA1471DFBCF5A00878B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CFA1461DFBCF5A00878B62 /* Assets.xcassets */; };
+		D4CFA14A1DFBCF5A00878B62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4CFA1481DFBCF5A00878B62 /* LaunchScreen.storyboard */; };
+		D4CFA1541DFBCFEE00878B62 /* TTChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA1531DFBCFEE00878B62 /* TTChatViewController.m */; };
+		D4CFA15B1DFBD24300878B62 /* TTInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA15A1DFBD24300878B62 /* TTInputView.m */; };
+		D4CFA15D1DFBD27B00878B62 /* TTInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CFA15C1DFBD27B00878B62 /* TTInputView.xib */; };
+		D4CFA15F1DFBD40A00878B62 /* ChatView.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CFA15E1DFBD40A00878B62 /* ChatView.xcassets */; };
+		D4CFA1781DFBD6BB00878B62 /* KeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA1681DFBD6BB00878B62 /* KeyboardManager.m */; };
+		D4CFA1791DFBD6BB00878B62 /* ImageViewerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA16B1DFBD6BB00878B62 /* ImageViewerCell.m */; };
+		D4CFA17A1DFBD6BB00878B62 /* ImageViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA16D1DFBD6BB00878B62 /* ImageViewerController.m */; };
+		D4CFA17B1DFBD6BB00878B62 /* ImageViewerDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA16F1DFBD6BB00878B62 /* ImageViewerDismissTransition.m */; };
+		D4CFA17C1DFBD6BB00878B62 /* ImageViewerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA1711DFBD6BB00878B62 /* ImageViewerItem.m */; };
+		D4CFA17D1DFBD6BB00878B62 /* ImageViewerPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA1731DFBD6BB00878B62 /* ImageViewerPresentTransition.m */; };
+		D4CFA17E1DFBD6BB00878B62 /* ZoomImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA1751DFBD6BB00878B62 /* ZoomImageScrollView.m */; };
+		D4CFA1861DFBF40900878B62 /* JSQMessagesComposerTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA1821DFBF40900878B62 /* JSQMessagesComposerTextView.m */; };
+		D4CFA1871DFBF40900878B62 /* StateButtom.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA1851DFBF40900878B62 /* StateButtom.m */; };
+		D4DAA3DC1DFFB73900E462C2 /* MYChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DAA3DB1DFFB73900E462C2 /* MYChatViewController.m */; };
+		D4FE601E1DFEA112001BA9DF /* TTChatTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FE601D1DFEA112001BA9DF /* TTChatTextCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D407A7AC1E21E28D0089F7CB /* EmojiPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiPageCell.h; sourceTree = "<group>"; };
+		D407A7AD1E21E28D0089F7CB /* EmojiPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiPageCell.m; sourceTree = "<group>"; };
+		D407A7AE1E21E28D0089F7CB /* EmojiPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmojiPageCell.xib; sourceTree = "<group>"; };
+		D407A7B11E21E29C0089F7CB /* EmojiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiCell.h; sourceTree = "<group>"; };
+		D407A7B21E21E29C0089F7CB /* EmojiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiCell.m; sourceTree = "<group>"; };
+		D407A7B31E21E29C0089F7CB /* EmojiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmojiCell.xib; sourceTree = "<group>"; };
+		D407A7B61E21E7FA0089F7CB /* EmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiView.h; sourceTree = "<group>"; };
+		D407A7B71E21E7FA0089F7CB /* EmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiView.m; sourceTree = "<group>"; };
+		D407A7B91E21E8050089F7CB /* EmojiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmojiView.xib; sourceTree = "<group>"; };
+		D40EC2B31DFD0D990096AE96 /* TTRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRecordButton.h; sourceTree = "<group>"; };
+		D40EC2B41DFD0D990096AE96 /* TTRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRecordButton.m; sourceTree = "<group>"; };
+		D41053591DFE4E1400E65C61 /* BubbleImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleImageItem.h; sourceTree = "<group>"; };
+		D410535A1DFE4E1400E65C61 /* BubbleImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleImageItem.m; sourceTree = "<group>"; };
+		D410535B1DFE4E1400E65C61 /* BubbleItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleItemProtocol.h; sourceTree = "<group>"; };
+		D410535C1DFE4E1400E65C61 /* BubbleTextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleTextItem.h; sourceTree = "<group>"; };
+		D410535D1DFE4E1400E65C61 /* BubbleTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleTextItem.m; sourceTree = "<group>"; };
+		D410535E1DFE4E1400E65C61 /* BubbleVideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleVideoItem.h; sourceTree = "<group>"; };
+		D410535F1DFE4E1400E65C61 /* BubbleVideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleVideoItem.m; sourceTree = "<group>"; };
+		D41053601DFE4E1400E65C61 /* BubbleVoiceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleVoiceItem.h; sourceTree = "<group>"; };
+		D41053611DFE4E1400E65C61 /* BubbleVoiceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleVoiceItem.m; sourceTree = "<group>"; };
+		D41053631DFE4E1400E65C61 /* TTChatBubbleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTChatBubbleCell.h; sourceTree = "<group>"; };
+		D41053641DFE4E1400E65C61 /* TTChatBubbleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTChatBubbleCell.m; sourceTree = "<group>"; };
+		D41053691DFE4E1400E65C61 /* TTBubbleCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBubbleCellModel.h; sourceTree = "<group>"; };
+		D410536A1DFE4E1400E65C61 /* TTBubbleCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBubbleCellModel.m; sourceTree = "<group>"; };
+		D41053721DFE581500E65C61 /* TTChatBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTChatBaseCell.h; sourceTree = "<group>"; };
+		D41053731DFE581500E65C61 /* TTChatBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTChatBaseCell.m; sourceTree = "<group>"; };
+		D4111B731DFC3CE700528491 /* AudioPlayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayHelper.h; sourceTree = "<group>"; };
+		D4111B741DFC3CE700528491 /* AudioPlayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayHelper.m; sourceTree = "<group>"; };
+		D4111B751DFC3CE700528491 /* CameraHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraHelper.h; sourceTree = "<group>"; };
+		D4111B761DFC3CE700528491 /* CameraHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraHelper.m; sourceTree = "<group>"; };
+		D4111B771DFC3CE700528491 /* ChatViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewHelper.h; sourceTree = "<group>"; };
+		D4111B781DFC3CE700528491 /* ChatViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewHelper.m; sourceTree = "<group>"; };
+		D4111B791DFC3CE700528491 /* LocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationHelper.h; sourceTree = "<group>"; };
+		D4111B7A1DFC3CE700528491 /* LocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationHelper.m; sourceTree = "<group>"; };
+		D4111B7B1DFC3CE700528491 /* VocieCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocieCache.h; sourceTree = "<group>"; };
+		D4111B7C1DFC3CE700528491 /* VocieCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocieCache.m; sourceTree = "<group>"; };
+		D4111B7D1DFC3CE700528491 /* VoiceRecordHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceRecordHelper.h; sourceTree = "<group>"; };
+		D4111B7E1DFC3CE700528491 /* VoiceRecordHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceRecordHelper.m; sourceTree = "<group>"; };
+		D413C9181DFD31D200407258 /* RecordIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordIndicatorView.h; sourceTree = "<group>"; };
+		D413C9191DFD31D200407258 /* RecordIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordIndicatorView.m; sourceTree = "<group>"; };
+		D413C91A1DFD31D200407258 /* RecordIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordIndicatorView.xib; sourceTree = "<group>"; };
+		D4850F1A1E211D9D007CE9EB /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji.json; sourceTree = "<group>"; };
+		D4CFA1371DFBCF5A00878B62 /* TTChatViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTChatViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4CFA13B1DFBCF5A00878B62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4CFA13D1DFBCF5A00878B62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D4CFA13E1DFBCF5A00878B62 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D4CFA1401DFBCF5A00878B62 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D4CFA1411DFBCF5A00878B62 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D4CFA1441DFBCF5A00878B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4CFA1461DFBCF5A00878B62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4CFA1491DFBCF5A00878B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4CFA14B1DFBCF5A00878B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4CFA1521DFBCFEE00878B62 /* TTChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTChatViewController.h; sourceTree = "<group>"; };
+		D4CFA1531DFBCFEE00878B62 /* TTChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTChatViewController.m; sourceTree = "<group>"; };
+		D4CFA1591DFBD24300878B62 /* TTInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTInputView.h; sourceTree = "<group>"; };
+		D4CFA15A1DFBD24300878B62 /* TTInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTInputView.m; sourceTree = "<group>"; };
+		D4CFA15C1DFBD27B00878B62 /* TTInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTInputView.xib; sourceTree = "<group>"; };
+		D4CFA15E1DFBD40A00878B62 /* ChatView.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChatView.xcassets; sourceTree = "<group>"; };
+		D4CFA1671DFBD6BB00878B62 /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
+		D4CFA1681DFBD6BB00878B62 /* KeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardManager.m; sourceTree = "<group>"; };
+		D4CFA16A1DFBD6BB00878B62 /* ImageViewerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewerCell.h; sourceTree = "<group>"; };
+		D4CFA16B1DFBD6BB00878B62 /* ImageViewerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewerCell.m; sourceTree = "<group>"; };
+		D4CFA16C1DFBD6BB00878B62 /* ImageViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewerController.h; sourceTree = "<group>"; };
+		D4CFA16D1DFBD6BB00878B62 /* ImageViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewerController.m; sourceTree = "<group>"; };
+		D4CFA16E1DFBD6BB00878B62 /* ImageViewerDismissTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewerDismissTransition.h; sourceTree = "<group>"; };
+		D4CFA16F1DFBD6BB00878B62 /* ImageViewerDismissTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewerDismissTransition.m; sourceTree = "<group>"; };
+		D4CFA1701DFBD6BB00878B62 /* ImageViewerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewerItem.h; sourceTree = "<group>"; };
+		D4CFA1711DFBD6BB00878B62 /* ImageViewerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewerItem.m; sourceTree = "<group>"; };
+		D4CFA1721DFBD6BB00878B62 /* ImageViewerPresentTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewerPresentTransition.h; sourceTree = "<group>"; };
+		D4CFA1731DFBD6BB00878B62 /* ImageViewerPresentTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewerPresentTransition.m; sourceTree = "<group>"; };
+		D4CFA1741DFBD6BB00878B62 /* ZoomImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomImageScrollView.h; sourceTree = "<group>"; };
+		D4CFA1751DFBD6BB00878B62 /* ZoomImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomImageScrollView.m; sourceTree = "<group>"; };
+		D4CFA17F1DFBDC8600878B62 /* TTInputViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTInputViewProtocol.h; sourceTree = "<group>"; };
+		D4CFA1811DFBF40900878B62 /* JSQMessagesComposerTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQMessagesComposerTextView.h; sourceTree = "<group>"; };
+		D4CFA1821DFBF40900878B62 /* JSQMessagesComposerTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQMessagesComposerTextView.m; sourceTree = "<group>"; };
+		D4CFA1841DFBF40900878B62 /* StateButtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateButtom.h; sourceTree = "<group>"; };
+		D4CFA1851DFBF40900878B62 /* StateButtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateButtom.m; sourceTree = "<group>"; };
+		D4DAA3D71DFFA47400E462C2 /* TTIMProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTIMProtocol.h; sourceTree = "<group>"; };
+		D4DAA3DA1DFFB73900E462C2 /* MYChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYChatViewController.h; sourceTree = "<group>"; };
+		D4DAA3DB1DFFB73900E462C2 /* MYChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYChatViewController.m; sourceTree = "<group>"; };
+		D4FE601C1DFEA112001BA9DF /* TTChatTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTChatTextCell.h; sourceTree = "<group>"; };
+		D4FE601D1DFEA112001BA9DF /* TTChatTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTChatTextCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4CFA1341DFBCF5A00878B62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D407A7A61E21DD660089F7CB /* EmojiView */ = {
+			isa = PBXGroup;
+			children = (
+				D407A7AC1E21E28D0089F7CB /* EmojiPageCell.h */,
+				D407A7AD1E21E28D0089F7CB /* EmojiPageCell.m */,
+				D407A7AE1E21E28D0089F7CB /* EmojiPageCell.xib */,
+				D407A7B11E21E29C0089F7CB /* EmojiCell.h */,
+				D407A7B21E21E29C0089F7CB /* EmojiCell.m */,
+				D407A7B31E21E29C0089F7CB /* EmojiCell.xib */,
+				D407A7B61E21E7FA0089F7CB /* EmojiView.h */,
+				D407A7B71E21E7FA0089F7CB /* EmojiView.m */,
+				D407A7B91E21E8050089F7CB /* EmojiView.xib */,
+			);
+			path = EmojiView;
+			sourceTree = "<group>";
+		};
+		D40EC2B21DFD0D4B0096AE96 /* RecordButton */ = {
+			isa = PBXGroup;
+			children = (
+				D413C9181DFD31D200407258 /* RecordIndicatorView.h */,
+				D413C9191DFD31D200407258 /* RecordIndicatorView.m */,
+				D413C91A1DFD31D200407258 /* RecordIndicatorView.xib */,
+				D40EC2B31DFD0D990096AE96 /* TTRecordButton.h */,
+				D40EC2B41DFD0D990096AE96 /* TTRecordButton.m */,
+			);
+			path = RecordButton;
+			sourceTree = "<group>";
+		};
+		D41053571DFE4E1400E65C61 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D41053581DFE4E1400E65C61 /* BubbleItem */,
+				D41053621DFE4E1400E65C61 /* Cell */,
+				D41053681DFE4E1400E65C61 /* Model */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D41053581DFE4E1400E65C61 /* BubbleItem */ = {
+			isa = PBXGroup;
+			children = (
+				D410535B1DFE4E1400E65C61 /* BubbleItemProtocol.h */,
+				D41053591DFE4E1400E65C61 /* BubbleImageItem.h */,
+				D410535A1DFE4E1400E65C61 /* BubbleImageItem.m */,
+				D410535C1DFE4E1400E65C61 /* BubbleTextItem.h */,
+				D410535D1DFE4E1400E65C61 /* BubbleTextItem.m */,
+				D410535E1DFE4E1400E65C61 /* BubbleVideoItem.h */,
+				D410535F1DFE4E1400E65C61 /* BubbleVideoItem.m */,
+				D41053601DFE4E1400E65C61 /* BubbleVoiceItem.h */,
+				D41053611DFE4E1400E65C61 /* BubbleVoiceItem.m */,
+			);
+			path = BubbleItem;
+			sourceTree = "<group>";
+		};
+		D41053621DFE4E1400E65C61 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D41053631DFE4E1400E65C61 /* TTChatBubbleCell.h */,
+				D41053641DFE4E1400E65C61 /* TTChatBubbleCell.m */,
+				D41053721DFE581500E65C61 /* TTChatBaseCell.h */,
+				D41053731DFE581500E65C61 /* TTChatBaseCell.m */,
+				D4FE601C1DFEA112001BA9DF /* TTChatTextCell.h */,
+				D4FE601D1DFEA112001BA9DF /* TTChatTextCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D41053681DFE4E1400E65C61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D41053691DFE4E1400E65C61 /* TTBubbleCellModel.h */,
+				D410536A1DFE4E1400E65C61 /* TTBubbleCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4111B721DFC3CE700528491 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D4111B731DFC3CE700528491 /* AudioPlayHelper.h */,
+				D4111B741DFC3CE700528491 /* AudioPlayHelper.m */,
+				D4111B751DFC3CE700528491 /* CameraHelper.h */,
+				D4111B761DFC3CE700528491 /* CameraHelper.m */,
+				D4111B771DFC3CE700528491 /* ChatViewHelper.h */,
+				D4111B781DFC3CE700528491 /* ChatViewHelper.m */,
+				D4111B791DFC3CE700528491 /* LocationHelper.h */,
+				D4111B7A1DFC3CE700528491 /* LocationHelper.m */,
+				D4111B7B1DFC3CE700528491 /* VocieCache.h */,
+				D4111B7C1DFC3CE700528491 /* VocieCache.m */,
+				D4111B7D1DFC3CE700528491 /* VoiceRecordHelper.h */,
+				D4111B7E1DFC3CE700528491 /* VoiceRecordHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D4CFA12E1DFBCF5A00878B62 = {
+			isa = PBXGroup;
+			children = (
+				D4CFA1391DFBCF5A00878B62 /* TTChatViewController */,
+				D4CFA1381DFBCF5A00878B62 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4CFA1381DFBCF5A00878B62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFA1371DFBCF5A00878B62 /* TTChatViewController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4CFA1391DFBCF5A00878B62 /* TTChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFA1511DFBCFBB00878B62 /* TTChatViewController */,
+				D4CFA13D1DFBCF5A00878B62 /* AppDelegate.h */,
+				D4CFA13E1DFBCF5A00878B62 /* AppDelegate.m */,
+				D4CFA1401DFBCF5A00878B62 /* ViewController.h */,
+				D4CFA1411DFBCF5A00878B62 /* ViewController.m */,
+				D4CFA1431DFBCF5A00878B62 /* Main.storyboard */,
+				D4CFA1461DFBCF5A00878B62 /* Assets.xcassets */,
+				D4CFA1481DFBCF5A00878B62 /* LaunchScreen.storyboard */,
+				D4CFA14B1DFBCF5A00878B62 /* Info.plist */,
+				D4CFA13A1DFBCF5A00878B62 /* Supporting Files */,
+				D4DAA3DA1DFFB73900E462C2 /* MYChatViewController.h */,
+				D4DAA3DB1DFFB73900E462C2 /* MYChatViewController.m */,
+			);
+			path = TTChatViewController;
+			sourceTree = "<group>";
+		};
+		D4CFA13A1DFBCF5A00878B62 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFA13B1DFBCF5A00878B62 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4CFA1511DFBCFBB00878B62 /* TTChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D4850F1A1E211D9D007CE9EB /* emoji.json */,
+				D4CFA15E1DFBD40A00878B62 /* ChatView.xcassets */,
+				D4DAA3D61DFFA17F00E462C2 /* IM */,
+				D41053571DFE4E1400E65C61 /* Cells */,
+				D4111B721DFC3CE700528491 /* Helper */,
+				D4CFA1601DFBD6BB00878B62 /* Vonder */,
+				D4CFA1581DFBD1BA00878B62 /* InputView */,
+				D4CFA1521DFBCFEE00878B62 /* TTChatViewController.h */,
+				D4CFA1531DFBCFEE00878B62 /* TTChatViewController.m */,
+			);
+			path = TTChatViewController;
+			sourceTree = "<group>";
+		};
+		D4CFA1581DFBD1BA00878B62 /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				D407A7A61E21DD660089F7CB /* EmojiView */,
+				D4CFA17F1DFBDC8600878B62 /* TTInputViewProtocol.h */,
+				D4CFA1591DFBD24300878B62 /* TTInputView.h */,
+				D4CFA15A1DFBD24300878B62 /* TTInputView.m */,
+				D4CFA15C1DFBD27B00878B62 /* TTInputView.xib */,
+			);
+			path = InputView;
+			sourceTree = "<group>";
+		};
+		D4CFA1601DFBD6BB00878B62 /* Vonder */ = {
+			isa = PBXGroup;
+			children = (
+				D40EC2B21DFD0D4B0096AE96 /* RecordButton */,
+				D4CFA1801DFBF40900878B62 /* JSQTextView */,
+				D4CFA1831DFBF40900878B62 /* StateButtom */,
+				D4CFA1661DFBD6BB00878B62 /* KeyboardManager */,
+				D4CFA1691DFBD6BB00878B62 /* PhotoViewer */,
+			);
+			path = Vonder;
+			sourceTree = "<group>";
+		};
+		D4CFA1661DFBD6BB00878B62 /* KeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFA1671DFBD6BB00878B62 /* KeyboardManager.h */,
+				D4CFA1681DFBD6BB00878B62 /* KeyboardManager.m */,
+			);
+			path = KeyboardManager;
+			sourceTree = "<group>";
+		};
+		D4CFA1691DFBD6BB00878B62 /* PhotoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFA16A1DFBD6BB00878B62 /* ImageViewerCell.h */,
+				D4CFA16B1DFBD6BB00878B62 /* ImageViewerCell.m */,
+				D4CFA16C1DFBD6BB00878B62 /* ImageViewerController.h */,
+				D4CFA16D1DFBD6BB00878B62 /* ImageViewerController.m */,
+				D4CFA16E1DFBD6BB00878B62 /* ImageViewerDismissTransition.h */,
+				D4CFA16F1DFBD6BB00878B62 /* ImageViewerDismissTransition.m */,
+				D4CFA1701DFBD6BB00878B62 /* ImageViewerItem.h */,
+				D4CFA1711DFBD6BB00878B62 /* ImageViewerItem.m */,
+				D4CFA1721DFBD6BB00878B62 /* ImageViewerPresentTransition.h */,
+				D4CFA1731DFBD6BB00878B62 /* ImageViewerPresentTransition.m */,
+				D4CFA1741DFBD6BB00878B62 /* ZoomImageScrollView.h */,
+				D4CFA1751DFBD6BB00878B62 /* ZoomImageScrollView.m */,
+			);
+			path = PhotoViewer;
+			sourceTree = "<group>";
+		};
+		D4CFA1801DFBF40900878B62 /* JSQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFA1811DFBF40900878B62 /* JSQMessagesComposerTextView.h */,
+				D4CFA1821DFBF40900878B62 /* JSQMessagesComposerTextView.m */,
+			);
+			path = JSQTextView;
+			sourceTree = "<group>";
+		};
+		D4CFA1831DFBF40900878B62 /* StateButtom */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFA1841DFBF40900878B62 /* StateButtom.h */,
+				D4CFA1851DFBF40900878B62 /* StateButtom.m */,
+			);
+			path = StateButtom;
+			sourceTree = "<group>";
+		};
+		D4DAA3D61DFFA17F00E462C2 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				D4DAA3D71DFFA47400E462C2 /* TTIMProtocol.h */,
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4CFA1361DFBCF5A00878B62 /* TTChatViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4CFA14E1DFBCF5A00878B62 /* Build configuration list for PBXNativeTarget "TTChatViewController" */;
+			buildPhases = (
+				D4CFA1331DFBCF5A00878B62 /* Sources */,
+				D4CFA1341DFBCF5A00878B62 /* Frameworks */,
+				D4CFA1351DFBCF5A00878B62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTChatViewController;
+			productName = TTChatViewController;
+			productReference = D4CFA1371DFBCF5A00878B62 /* TTChatViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4CFA12F1DFBCF5A00878B62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = chatchat;
+				TargetAttributes = {
+					D4CFA1361DFBCF5A00878B62 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 6NKY5M245W;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D4CFA1321DFBCF5A00878B62 /* Build configuration list for PBXProject "TTChatViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4CFA12E1DFBCF5A00878B62;
+			productRefGroup = D4CFA1381DFBCF5A00878B62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4CFA1361DFBCF5A00878B62 /* TTChatViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4CFA1351DFBCF5A00878B62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D407A7B51E21E29C0089F7CB /* EmojiCell.xib in Resources */,
+				D413C91C1DFD31D200407258 /* RecordIndicatorView.xib in Resources */,
+				D407A7B01E21E28D0089F7CB /* EmojiPageCell.xib in Resources */,
+				D4850F1B1E211D9D007CE9EB /* emoji.json in Resources */,
+				D4CFA14A1DFBCF5A00878B62 /* LaunchScreen.storyboard in Resources */,
+				D407A7BA1E21E8050089F7CB /* EmojiView.xib in Resources */,
+				D4CFA15F1DFBD40A00878B62 /* ChatView.xcassets in Resources */,
+				D4CFA1471DFBCF5A00878B62 /* Assets.xcassets in Resources */,
+				D4CFA15D1DFBD27B00878B62 /* TTInputView.xib in Resources */,
+				D4CFA1451DFBCF5A00878B62 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4CFA1331DFBCF5A00878B62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4CFA1781DFBD6BB00878B62 /* KeyboardManager.m in Sources */,
+				D4CFA1861DFBF40900878B62 /* JSQMessagesComposerTextView.m in Sources */,
+				D4111B801DFC3CE700528491 /* CameraHelper.m in Sources */,
+				D410536D1DFE4E1400E65C61 /* BubbleVideoItem.m in Sources */,
+				D410536C1DFE4E1400E65C61 /* BubbleTextItem.m in Sources */,
+				D40EC2B51DFD0D990096AE96 /* TTRecordButton.m in Sources */,
+				D4CFA1871DFBF40900878B62 /* StateButtom.m in Sources */,
+				D4111B821DFC3CE700528491 /* LocationHelper.m in Sources */,
+				D4CFA1541DFBCFEE00878B62 /* TTChatViewController.m in Sources */,
+				D41053741DFE581500E65C61 /* TTChatBaseCell.m in Sources */,
+				D4CFA17B1DFBD6BB00878B62 /* ImageViewerDismissTransition.m in Sources */,
+				D4CFA1421DFBCF5A00878B62 /* ViewController.m in Sources */,
+				D4CFA1791DFBD6BB00878B62 /* ImageViewerCell.m in Sources */,
+				D4CFA13F1DFBCF5A00878B62 /* AppDelegate.m in Sources */,
+				D410536F1DFE4E1400E65C61 /* TTChatBubbleCell.m in Sources */,
+				D4CFA17E1DFBD6BB00878B62 /* ZoomImageScrollView.m in Sources */,
+				D4111B831DFC3CE700528491 /* VocieCache.m in Sources */,
+				D4CFA17C1DFBD6BB00878B62 /* ImageViewerItem.m in Sources */,
+				D4CFA17A1DFBD6BB00878B62 /* ImageViewerController.m in Sources */,
+				D4FE601E1DFEA112001BA9DF /* TTChatTextCell.m in Sources */,
+				D407A7AF1E21E28D0089F7CB /* EmojiPageCell.m in Sources */,
+				D4CFA15B1DFBD24300878B62 /* TTInputView.m in Sources */,
+				D4111B811DFC3CE700528491 /* ChatViewHelper.m in Sources */,
+				D407A7B41E21E29C0089F7CB /* EmojiCell.m in Sources */,
+				D413C91B1DFD31D200407258 /* RecordIndicatorView.m in Sources */,
+				D41053711DFE4E1400E65C61 /* TTBubbleCellModel.m in Sources */,
+				D407A7B81E21E7FA0089F7CB /* EmojiView.m in Sources */,
+				D410536B1DFE4E1400E65C61 /* BubbleImageItem.m in Sources */,
+				D4CFA17D1DFBD6BB00878B62 /* ImageViewerPresentTransition.m in Sources */,
+				D4DAA3DC1DFFB73900E462C2 /* MYChatViewController.m in Sources */,
+				D4111B7F1DFC3CE700528491 /* AudioPlayHelper.m in Sources */,
+				D410536E1DFE4E1400E65C61 /* BubbleVoiceItem.m in Sources */,
+				D4CFA13C1DFBCF5A00878B62 /* main.m in Sources */,
+				D4111B841DFC3CE700528491 /* VoiceRecordHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4CFA1431DFBCF5A00878B62 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4CFA1441DFBCF5A00878B62 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4CFA1481DFBCF5A00878B62 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4CFA1491DFBCF5A00878B62 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4CFA14C1DFBCF5A00878B62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D4CFA14D1DFBCF5A00878B62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4CFA14F1DFBCF5A00878B62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6NKY5M245W;
+				INFOPLIST_FILE = TTChatViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tanson.TTChatViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4CFA1501DFBCF5A00878B62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6NKY5M245W;
+				INFOPLIST_FILE = TTChatViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tanson.TTChatViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4CFA1321DFBCF5A00878B62 /* Build configuration list for PBXProject "TTChatViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4CFA14C1DFBCF5A00878B62 /* Debug */,
+				D4CFA14D1DFBCF5A00878B62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4CFA14E1DFBCF5A00878B62 /* Build configuration list for PBXNativeTarget "TTChatViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4CFA14F1DFBCF5A00878B62 /* Debug */,
+				D4CFA1501DFBCF5A00878B62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4CFA12F1DFBCF5A00878B62 /* Project object */;
+}
