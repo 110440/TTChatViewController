@@ -28,6 +28,7 @@
     _data = [self prePageData:emoji[@"people"]];
     _pageCtl.numberOfPages = _data.count;
     _pageCtl.currentPage = 0;
+    [self.collectionView reloadData];
 }
 -(void)show{
     
@@ -35,7 +36,7 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    [self.collectionView reloadData];
+    //[self.collectionView reloadData];
 }
 
 -(NSArray*)prePageData:(NSArray*)data{

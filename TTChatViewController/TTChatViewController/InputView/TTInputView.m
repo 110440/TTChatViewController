@@ -16,6 +16,8 @@
 #import "EmojiView.h"
 #import "TTMoreView.h"
 
+#define keyboradHeight 216
+
 #define lineCGColor [UIColor colorWithRed:194.0/255.0 green:195.0/255.0 blue:199.0/255.0 alpha:1].CGColor
 
 @interface TTInputView ()
@@ -71,6 +73,9 @@
             [wSelf layoutIfNeeded];
             [wSelf callHeightToChange];
             [wSelf refleshBotton];
+            
+            wSelf.moreInputView.frame = CGRectMake(0, 0, wSelf.bounds.size.width, h);
+            [wSelf.moreInputView reloadData];
         };
         _keyBoardManager.animateWhenKeyboardDisappear = ^(CGFloat h){
             if(wSelf.curInputState != Emoji && wSelf.curInputState != More){
@@ -113,12 +118,15 @@
 -(TTMoreView *)moreInputView{
     if(!_moreInputView){
         _moreInputView =[[NSBundle bundleForClass:[self class]] loadNibNamed:@"TTMoreView" owner:nil options:nil].firstObject;
-        _moreInputView.translatesAutoresizingMaskIntoConstraints = NO;
+        //_moreInputView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.bottomView addSubview:_moreInputView];
-        [self.bottomView ex_pinAllEdgesOfSubview:_moreInputView];
+        //[self.bottomView ex_pinAllEdgesOfSubview:_moreInputView];
+        _moreInputView.frame = CGRectMake(0, 0, self.bounds.size.width, keyboradHeight);
+        
+        __weak typeof(self) wSelf = self;
         _moreInputView.itemTapBlock = ^(NSString * title){
             NSLog(@"tap:%@",title);
-            [self moveDown];
+            [wSelf moveDown];
         };
     }
     return _moreInputView;
@@ -174,6 +182,7 @@
             _curInputState = More;
             self.emojiView.hidden = YES;
             self.moreInputView.hidden = NO;
+            [self.moreInputView layoutIfNeeded];
             [self moveUp];
         }
     };
@@ -230,11 +239,12 @@
     }else{
         [UIView animateWithDuration:0.3 delay:0 options:(UIViewAnimationOptionCurveEaseOut) animations:^{
             // 216 中文键盘会有两次高度改变，216 为小于等于第一次变化高度，这样总体变化是向上的动画，避免上下抖动
-            CGFloat height = MAX(self.keyBoardManager.keyboardheight,216);
+            CGFloat height = MAX(self.keyBoardManager.keyboardheight,keyboradHeight);
             self.bottomViewHeightConstraint.constant = height;
             [self layoutIfNeeded];
             [self callHeightToChange];
-        } completion:nil];
+        } completion:^(BOOL finished){
+        }];
     }
     [self refleshBotton];
 }

@@ -17,6 +17,7 @@
                         <constraint firstAttribute="height" constant="30" id="o67-Ua-dos"/>
                     </constraints>
                     <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </pageControl>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KcS-be-PEQ">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,7 +33,7 @@
                     </connections>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="O0t-kR-r6i" secondAttribute="trailing" id="Aq5-Fa-Zfk"/>
                 <constraint firstAttribute="bottom" secondItem="O0t-kR-r6i" secondAttribute="bottom" id="DXh-c1-Nhs"/>

@@ -22,4 +22,5 @@ typedef void (^TTMoreViewItemTapHandel)(NSString *title);
 
 @interface TTMoreView : UIView
 @property (nonatomic,copy)TTMoreViewItemTapHandel itemTapBlock;
+-(void)reloadData;
 @end

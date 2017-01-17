@@ -10,10 +10,13 @@
 #import "TTMoreViewCell.h"
 #import "TTMoreView.h"
 
-#define colSpace 35
-#define lineSpace 20
-#define hMargin 35
-#define vMargin 15
+//#define colSpace 35
+//#define lineSpace 20
+//#define hMargin 35
+//#define vMargin 15
+
+#define itemWidth 50
+#define itemHeight 70
 
 @interface TTMoreViewPageCell ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -59,20 +62,27 @@
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    CGSize size = collectionView.bounds.size;
-    CGFloat w = (size.width - (hMargin * 2) - (moreViewColNum - 1) * colSpace)/moreViewColNum;
-    CGFloat h = (size.height - (vMargin * 2) - (moreViewRowNum -1) * lineSpace)/moreViewRowNum;
-    return  CGSizeMake(w, h);
+    //CGSize size = collectionView.bounds.size;
+    //CGFloat w = (size.width - (hMargin * 2) - (moreViewColNum - 1) * colSpace)/moreViewColNum;
+    //CGFloat h = (size.height - (vMargin * 2) - (moreViewRowNum -1) * lineSpace)/moreViewRowNum;
+    return  CGSizeMake(itemWidth, itemHeight);
 }
 
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
-    return lineSpace;
+    CGSize size = self.bounds.size;
+    return (size.height - moreViewRowNum * itemHeight) / (moreViewRowNum+1);
+    //return lineSpace;
 }
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
-    return colSpace;
+    CGSize size = self.bounds.size;
+    return (size.width - moreViewColNum * itemWidth) / (moreViewColNum+1);
+    //return colSpace;
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(vMargin, hMargin, vMargin, hMargin);
+    CGSize size = self.bounds.size;
+    CGFloat v = (size.height - moreViewRowNum * itemHeight) / (moreViewRowNum+1);
+    CGFloat h = (size.width - moreViewColNum * itemWidth) / (moreViewColNum+1);
+    return UIEdgeInsetsMake(v, h, v, h);
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

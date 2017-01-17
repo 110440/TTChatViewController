@@ -28,6 +28,7 @@
     _data = [self prePageData:[self moreData]];
     _pageCtl.numberOfPages = _data.count;
     _pageCtl.currentPage = 0;
+    [self.collectionView reloadData];
 }
 
 -(NSArray*) moreData{
@@ -46,8 +47,7 @@
     return @[photo,camera,video,location];
 }
 
--(void)layoutSubviews{
-    [super layoutSubviews];
+-(void)reloadData{
     [self.collectionView reloadData];
 }
 
@@ -85,7 +85,8 @@
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return collectionView.bounds.size;
+    CGSize size = collectionView.bounds.size;
+    return size;
 }
 
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
