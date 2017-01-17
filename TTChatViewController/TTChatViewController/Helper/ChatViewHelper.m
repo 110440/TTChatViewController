@@ -66,14 +66,14 @@
     NSDate * now = [NSDate date];
     NSDateComponents *compsNow  = [[NSDateComponents alloc] init];
     NSDateComponents *compsFrom = [[NSDateComponents alloc] init];
-    NSInteger flag = NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitYearForWeekOfYear|NSCalendarUnitDay;
+    NSInteger flag = NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitYearForWeekOfYear|NSCalendarUnitDay|NSCalendarUnitWeekOfYear;
     compsNow  = [calendar components:flag fromDate:now];
     compsFrom = [calendar components:flag fromDate:date];
     
     if(compsNow.year > compsFrom.year){
         // Ｎ年前
         return [yearsAgo stringFromDate:date];
-    }else if(compsNow.month > compsFrom.month){
+    }else if(compsNow.month > compsFrom.month || (compsNow.weekOfYear != compsFrom.weekOfYear) ){
         // 今年内
         return [years stringFromDate:date];
     }else if(compsNow.weekOfYear == compsFrom.weekOfYear){

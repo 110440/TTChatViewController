@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D405BF1A1E23486F00E4743A /* AddressBookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D405BF191E23486F00E4743A /* AddressBookHelper.m */; };
 		D407A7AF1E21E28D0089F7CB /* EmojiPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407A7AD1E21E28D0089F7CB /* EmojiPageCell.m */; };
 		D407A7B01E21E28D0089F7CB /* EmojiPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407A7AE1E21E28D0089F7CB /* EmojiPageCell.xib */; };
 		D407A7B41E21E29C0089F7CB /* EmojiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407A7B21E21E29C0089F7CB /* EmojiCell.m */; };
 		D407A7B51E21E29C0089F7CB /* EmojiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407A7B31E21E29C0089F7CB /* EmojiCell.xib */; };
 		D407A7B81E21E7FA0089F7CB /* EmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = D407A7B71E21E7FA0089F7CB /* EmojiView.m */; };
 		D407A7BA1E21E8050089F7CB /* EmojiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407A7B91E21E8050089F7CB /* EmojiView.xib */; };
+		D409E07D1E2E021800F939FC /* TTMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = D409E0751E2E021800F939FC /* TTMoreView.m */; };
+		D409E07E1E2E021800F939FC /* TTMoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D409E0761E2E021800F939FC /* TTMoreView.xib */; };
+		D409E07F1E2E021800F939FC /* TTMoreViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D409E0781E2E021800F939FC /* TTMoreViewCell.m */; };
+		D409E0801E2E021800F939FC /* TTMoreViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D409E0791E2E021800F939FC /* TTMoreViewCell.xib */; };
+		D409E0811E2E021800F939FC /* TTMoreViewPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D409E07B1E2E021800F939FC /* TTMoreViewPageCell.m */; };
+		D409E0821E2E021800F939FC /* TTMoreViewPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D409E07C1E2E021800F939FC /* TTMoreViewPageCell.xib */; };
 		D40EC2B51DFD0D990096AE96 /* TTRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D40EC2B41DFD0D990096AE96 /* TTRecordButton.m */; };
 		D410536B1DFE4E1400E65C61 /* BubbleImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D410535A1DFE4E1400E65C61 /* BubbleImageItem.m */; };
 		D410536C1DFE4E1400E65C61 /* BubbleTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D410535D1DFE4E1400E65C61 /* BubbleTextItem.m */; };
@@ -54,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D405BF181E23486F00E4743A /* AddressBookHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookHelper.h; sourceTree = "<group>"; };
+		D405BF191E23486F00E4743A /* AddressBookHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookHelper.m; sourceTree = "<group>"; };
 		D407A7AC1E21E28D0089F7CB /* EmojiPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiPageCell.h; sourceTree = "<group>"; };
 		D407A7AD1E21E28D0089F7CB /* EmojiPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiPageCell.m; sourceTree = "<group>"; };
 		D407A7AE1E21E28D0089F7CB /* EmojiPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmojiPageCell.xib; sourceTree = "<group>"; };
@@ -63,6 +72,15 @@
 		D407A7B61E21E7FA0089F7CB /* EmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiView.h; sourceTree = "<group>"; };
 		D407A7B71E21E7FA0089F7CB /* EmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiView.m; sourceTree = "<group>"; };
 		D407A7B91E21E8050089F7CB /* EmojiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmojiView.xib; sourceTree = "<group>"; };
+		D409E0741E2E021800F939FC /* TTMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoreView.h; sourceTree = "<group>"; };
+		D409E0751E2E021800F939FC /* TTMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoreView.m; sourceTree = "<group>"; };
+		D409E0761E2E021800F939FC /* TTMoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTMoreView.xib; sourceTree = "<group>"; };
+		D409E0771E2E021800F939FC /* TTMoreViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoreViewCell.h; sourceTree = "<group>"; };
+		D409E0781E2E021800F939FC /* TTMoreViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoreViewCell.m; sourceTree = "<group>"; };
+		D409E0791E2E021800F939FC /* TTMoreViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTMoreViewCell.xib; sourceTree = "<group>"; };
+		D409E07A1E2E021800F939FC /* TTMoreViewPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoreViewPageCell.h; sourceTree = "<group>"; };
+		D409E07B1E2E021800F939FC /* TTMoreViewPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoreViewPageCell.m; sourceTree = "<group>"; };
+		D409E07C1E2E021800F939FC /* TTMoreViewPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTMoreViewPageCell.xib; sourceTree = "<group>"; };
 		D40EC2B31DFD0D990096AE96 /* TTRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRecordButton.h; sourceTree = "<group>"; };
 		D40EC2B41DFD0D990096AE96 /* TTRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRecordButton.m; sourceTree = "<group>"; };
 		D41053591DFE4E1400E65C61 /* BubbleImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleImageItem.h; sourceTree = "<group>"; };
@@ -149,6 +167,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D405BF171E23486F00E4743A /* AddressBookHelper */ = {
+			isa = PBXGroup;
+			children = (
+				D405BF181E23486F00E4743A /* AddressBookHelper.h */,
+				D405BF191E23486F00E4743A /* AddressBookHelper.m */,
+			);
+			path = AddressBookHelper;
+			sourceTree = "<group>";
+		};
 		D407A7A61E21DD660089F7CB /* EmojiView */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +190,22 @@
 				D407A7B91E21E8050089F7CB /* EmojiView.xib */,
 			);
 			path = EmojiView;
+			sourceTree = "<group>";
+		};
+		D409E0731E2E021800F939FC /* MoreView */ = {
+			isa = PBXGroup;
+			children = (
+				D409E0741E2E021800F939FC /* TTMoreView.h */,
+				D409E0751E2E021800F939FC /* TTMoreView.m */,
+				D409E0761E2E021800F939FC /* TTMoreView.xib */,
+				D409E0771E2E021800F939FC /* TTMoreViewCell.h */,
+				D409E0781E2E021800F939FC /* TTMoreViewCell.m */,
+				D409E0791E2E021800F939FC /* TTMoreViewCell.xib */,
+				D409E07A1E2E021800F939FC /* TTMoreViewPageCell.h */,
+				D409E07B1E2E021800F939FC /* TTMoreViewPageCell.m */,
+				D409E07C1E2E021800F939FC /* TTMoreViewPageCell.xib */,
+			);
+			path = MoreView;
 			sourceTree = "<group>";
 		};
 		D40EC2B21DFD0D4B0096AE96 /* RecordButton */ = {
@@ -228,6 +271,7 @@
 		D4111B721DFC3CE700528491 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D405BF171E23486F00E4743A /* AddressBookHelper */,
 				D4111B731DFC3CE700528491 /* AudioPlayHelper.h */,
 				D4111B741DFC3CE700528491 /* AudioPlayHelper.m */,
 				D4111B751DFC3CE700528491 /* CameraHelper.h */,
@@ -306,6 +350,7 @@
 		D4CFA1581DFBD1BA00878B62 /* InputView */ = {
 			isa = PBXGroup;
 			children = (
+				D409E0731E2E021800F939FC /* MoreView */,
 				D407A7A61E21DD660089F7CB /* EmojiView */,
 				D4CFA17F1DFBDC8600878B62 /* TTInputViewProtocol.h */,
 				D4CFA1591DFBD24300878B62 /* TTInputView.h */,
@@ -445,9 +490,12 @@
 				D407A7B01E21E28D0089F7CB /* EmojiPageCell.xib in Resources */,
 				D4850F1B1E211D9D007CE9EB /* emoji.json in Resources */,
 				D4CFA14A1DFBCF5A00878B62 /* LaunchScreen.storyboard in Resources */,
+				D409E0801E2E021800F939FC /* TTMoreViewCell.xib in Resources */,
+				D409E0821E2E021800F939FC /* TTMoreViewPageCell.xib in Resources */,
 				D407A7BA1E21E8050089F7CB /* EmojiView.xib in Resources */,
 				D4CFA15F1DFBD40A00878B62 /* ChatView.xcassets in Resources */,
 				D4CFA1471DFBCF5A00878B62 /* Assets.xcassets in Resources */,
+				D409E07E1E2E021800F939FC /* TTMoreView.xib in Resources */,
 				D4CFA15D1DFBD27B00878B62 /* TTInputView.xib in Resources */,
 				D4CFA1451DFBCF5A00878B62 /* Main.storyboard in Resources */,
 			);
@@ -465,11 +513,13 @@
 				D4111B801DFC3CE700528491 /* CameraHelper.m in Sources */,
 				D410536D1DFE4E1400E65C61 /* BubbleVideoItem.m in Sources */,
 				D410536C1DFE4E1400E65C61 /* BubbleTextItem.m in Sources */,
+				D409E07D1E2E021800F939FC /* TTMoreView.m in Sources */,
 				D40EC2B51DFD0D990096AE96 /* TTRecordButton.m in Sources */,
 				D4CFA1871DFBF40900878B62 /* StateButtom.m in Sources */,
 				D4111B821DFC3CE700528491 /* LocationHelper.m in Sources */,
 				D4CFA1541DFBCFEE00878B62 /* TTChatViewController.m in Sources */,
 				D41053741DFE581500E65C61 /* TTChatBaseCell.m in Sources */,
+				D409E07F1E2E021800F939FC /* TTMoreViewCell.m in Sources */,
 				D4CFA17B1DFBD6BB00878B62 /* ImageViewerDismissTransition.m in Sources */,
 				D4CFA1421DFBCF5A00878B62 /* ViewController.m in Sources */,
 				D4CFA1791DFBD6BB00878B62 /* ImageViewerCell.m in Sources */,
@@ -478,11 +528,13 @@
 				D4CFA17E1DFBD6BB00878B62 /* ZoomImageScrollView.m in Sources */,
 				D4111B831DFC3CE700528491 /* VocieCache.m in Sources */,
 				D4CFA17C1DFBD6BB00878B62 /* ImageViewerItem.m in Sources */,
+				D409E0811E2E021800F939FC /* TTMoreViewPageCell.m in Sources */,
 				D4CFA17A1DFBD6BB00878B62 /* ImageViewerController.m in Sources */,
 				D4FE601E1DFEA112001BA9DF /* TTChatTextCell.m in Sources */,
 				D407A7AF1E21E28D0089F7CB /* EmojiPageCell.m in Sources */,
 				D4CFA15B1DFBD24300878B62 /* TTInputView.m in Sources */,
 				D4111B811DFC3CE700528491 /* ChatViewHelper.m in Sources */,
+				D405BF1A1E23486F00E4743A /* AddressBookHelper.m in Sources */,
 				D407A7B41E21E29C0089F7CB /* EmojiCell.m in Sources */,
 				D413C91B1DFD31D200407258 /* RecordIndicatorView.m in Sources */,
 				D41053711DFE4E1400E65C61 /* TTBubbleCellModel.m in Sources */,

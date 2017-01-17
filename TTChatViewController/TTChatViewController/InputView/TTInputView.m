@@ -14,7 +14,7 @@
 #import "ChatViewHelper.h"
 
 #import "EmojiView.h"
-
+#import "TTMoreView.h"
 
 #define lineCGColor [UIColor colorWithRed:194.0/255.0 green:195.0/255.0 blue:199.0/255.0 alpha:1].CGColor
 
@@ -40,7 +40,7 @@
 @property (strong,nonatomic) KeyboardManager * keyBoardManager;
 
 @property (strong,nonatomic) EmojiView * emojiView;
-
+@property (strong,nonatomic) TTMoreView * moreInputView;
 @end
 
 @implementation TTInputView
@@ -110,6 +110,20 @@
     return _emojiView;
 }
 
+-(TTMoreView *)moreInputView{
+    if(!_moreInputView){
+        _moreInputView =[[NSBundle bundleForClass:[self class]] loadNibNamed:@"TTMoreView" owner:nil options:nil].firstObject;
+        _moreInputView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self.bottomView addSubview:_moreInputView];
+        [self.bottomView ex_pinAllEdgesOfSubview:_moreInputView];
+        _moreInputView.itemTapBlock = ^(NSString * title){
+            NSLog(@"tap:%@",title);
+            [self moveDown];
+        };
+    }
+    return _moreInputView;
+}
+
 -(void) setupSubvews{
     self.bottomViewHeightConstraint.constant = 0;
     self.inputBarView.layer.borderColor = lineCGColor;
@@ -147,6 +161,7 @@
         }else{
             _curInputState = Emoji;
             self.emojiView.hidden = NO;
+            self.moreInputView.hidden = YES;
             [self moveUp];
         }
     };
@@ -158,6 +173,7 @@
         }else{
             _curInputState = More;
             self.emojiView.hidden = YES;
+            self.moreInputView.hidden = NO;
             [self moveUp];
         }
     };
