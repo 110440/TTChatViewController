@@ -85,10 +85,6 @@
       self.didFinishTakeMediaCompletion ? self.didFinishTakeMediaCompletion(MediaTypeVideo,videoData) : nil;
         
     }
-    
-    
-    
-    
     //退出
     [self dismissPickerViewController:picker];
     

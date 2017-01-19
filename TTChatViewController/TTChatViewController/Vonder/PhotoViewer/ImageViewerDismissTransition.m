@@ -41,7 +41,7 @@
     
     ImageViewerCell * imageCell = (ImageViewerCell*)[fromViewController.collectionView cellForItemAtIndexPath:curCellIndexPath];
     imageCell.scrollView.imageView.clipsToBounds = desSnapshotView.clipsToBounds;
-    imageCell.scrollView.imageView.contentMode = desSnapshotView.contentMode;
+    //imageCell.scrollView.imageView.contentMode = desSnapshotView.contentMode;
     
     CGRect frame = [imageCell.scrollView convertRect:desSnapshotView.frame fromView:desSnapshotView.superview];
     

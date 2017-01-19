@@ -6,6 +6,7 @@
 //  Copyright © 2016年 chatchat. All rights reserved.
 
 #import "TTChatViewController.h"
+#import "CameraHelper.h"
 
 #define BGColor [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1]
 
@@ -163,6 +164,8 @@
         obj.isSelected = NO;
     }];
 }
+
+
 #pragma mark- 子类可重载提供不同的实现
 
 -(UIImage*) bubbleImageForModel:(TTBubbleCellModel*)model atIndex:(NSInteger)index{
@@ -171,6 +174,22 @@
     }else{
         return self.incomeingBubbleImage;
     }
+}
+
+-(NSArray<TTMoreViewCellModel *> *)dataForMoreViewItems{
+    TTMoreViewCellModel * photo = [TTMoreViewCellModel new];
+    photo.title = @"相册";
+    photo.iconName = @"chat_more_pic";
+    TTMoreViewCellModel * camera = [TTMoreViewCellModel new];
+    camera.title = @"拍摄";
+    camera.iconName = @"chat_more_video";
+    TTMoreViewCellModel * video = [TTMoreViewCellModel new];
+    video.title = @"视频聊天";
+    video.iconName = @"chat_more_videovoip";
+    TTMoreViewCellModel * location = [TTMoreViewCellModel new];
+    location.title = @"位置";
+    location.iconName = @"chat_more_location";
+    return @[photo,camera,video,location];
 }
 
 - (NSString *) dateStringForModel:(TTBubbleCellModel*)model andPreModels:(NSArray*)preModels{
@@ -236,12 +255,53 @@
 -(void)resendMessageWihtIndex:(NSInteger)index{}
 -(void)avatarTouchAtIndex:(NSInteger)index{}
 -(void)messageDidRemoveAtIndex:(NSInteger)index{}
--(void)textMessageDidAddWithText:(NSString*)text{}
--(void)voiceMessageDidAddWithPath:(NSString*)path{}
+
+-(void)textMessageDidAddWithText:(NSString*)text{
+    id<BubbleItemProtocol>  item = [[BubbleTextItem alloc] initWithText:text];
+    TTBubbleCellModel * model = [[TTBubbleCellModel alloc] initWithDisplayName:self.displayName
+                                                                          date:[NSDate date]
+                                                                    bubbleItem:item
+                                                                    isOutgoing:YES];
+    [self appendMessage:model];
+    [self appendMessageFinish];
+}
+
+-(void)imageMessageDidAdd:(UIImage *)image{
+    id<BubbleItemProtocol>  item = [[BubbleImageItem alloc]initWithImage:image];
+    TTBubbleCellModel * model = [[TTBubbleCellModel alloc] initWithDisplayName:self.displayName
+                                                                          date:[NSDate date]
+                                                                    bubbleItem:item
+                                                                    isOutgoing:YES];
+    [self appendMessage:model];
+    [self appendMessageFinish];
+}
+
+-(void)voiceMessageDidAddWithPath:(NSString*)path duration:(CGFloat)duration{
+    id<BubbleItemProtocol>  item = [[BubbleVoiceItem alloc] initWithPath:path voiceDuration:duration];
+    TTBubbleCellModel * model = [[TTBubbleCellModel alloc] initWithDisplayName:self.displayName
+                                                                          date:[NSDate date]
+                                                                    bubbleItem:item
+                                                                    isOutgoing:YES];
+    [self appendMessage:model];
+    [self appendMessageFinish];
+}
+
 -(void) loadMoreMessageWithDone:(void(^)(NSArray<TTBubbleCellModel*>* models))done{
     done(nil);
 }
 
+-(void) moreViewItemDidTapWithTitle:(NSString*)t{
+    if([t isEqualToString:@"拍摄"]){
+        [[CameraHelper helper] showPickerViewControllerSourceType:UIImagePickerControllerSourceTypeCamera
+                                                 onViewController:self
+                                                       completion:^(MediaType mediaType, NSData *data) {
+                                                           if(data){
+                                                               UIImage * image = [UIImage imageWithData:data];
+                                                               [self imageMessageDidAdd:image];
+                                                           }
+        }];
+    }
+}
 
 #pragma mark- tableView delagate
 
@@ -360,10 +420,9 @@
 #pragma mark- inputView delegate
 
 -(void)inputViewHeightDidChangeTo:(CGFloat)height{
-    //[self.tableView scrollToBottom];
-    //[self.view layoutIfNeeded];
     [self resetTableViewFrame];
     [self.tableView scrollToBottom];
+    [self.tableView reloadData];
 }
 
 -(void)inputViewWillMoveUp{
@@ -372,24 +431,19 @@
 }
 
 -(void)sendButtonDidTouch:(NSString *)text{
-    id<BubbleItemProtocol>  item = [[BubbleTextItem alloc] initWithText:text];
-    TTBubbleCellModel * model = [[TTBubbleCellModel alloc] initWithDisplayName:self.displayName
-                                                                      date:[NSDate date]
-                                                                bubbleItem:item
-                                                                isOutgoing:YES];
-    [self appendMessage:model];
-    [self appendMessageFinish];
     [self textMessageDidAddWithText:text];
 }
 
 -(void)recordComplatedWithPath:(NSString *)path duration:(CGFloat)duration{
-    id<BubbleItemProtocol>  item = [[BubbleVoiceItem alloc] initWithPath:path voiceDuration:duration];
-    TTBubbleCellModel * model = [[TTBubbleCellModel alloc] initWithDisplayName:self.displayName
-                                                                      date:[NSDate date]
-                                                                bubbleItem:item
-                                                                isOutgoing:YES];
-    [self appendMessage:model];
-    [self appendMessageFinish];
-    [self voiceMessageDidAddWithPath:path];
+    [self voiceMessageDidAddWithPath:path duration:duration];
 }
+
+-(NSArray<TTMoreViewCellModel *> *)moreViewItems{
+    return [self dataForMoreViewItems];
+}
+
+-(void)moreViewItemTapWithTitle:(NSString *)title{
+    [self moreViewItemDidTapWithTitle:title];
+}
+
 @end

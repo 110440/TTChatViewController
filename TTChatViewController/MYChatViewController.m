@@ -86,8 +86,6 @@
             done(nil);
         }
     }];
-    
-    
 }
 
 -(UIImage*) bubbleImageForModel:(TTBubbleCellModel*)model atIndex:(NSInteger)index{

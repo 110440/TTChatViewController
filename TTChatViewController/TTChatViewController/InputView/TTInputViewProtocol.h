@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TTMoreView.h"
 
 typedef NS_ENUM(NSInteger, InputBarInputState) {
     Voice  = 0,
@@ -26,5 +27,9 @@ typedef NS_ENUM(NSInteger, InputBarInputState) {
 -(void) inputViewWillMoveUp;
 -(void) sendButtonDidTouch:(NSString*)text;
 -(void) recordComplatedWithPath:(NSString *)path duration:(CGFloat)duration;
+
+// More input view
+-(NSArray<TTMoreViewCellModel*> *) moreViewItems;
+-(void)moreViewItemTapWithTitle:(NSString*)title;
 
 @end

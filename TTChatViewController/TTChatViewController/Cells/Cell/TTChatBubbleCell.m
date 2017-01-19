@@ -158,7 +158,7 @@
 }
 
 -(void)bubbleLongPress:(UILongPressGestureRecognizer*)geture{
-    [self becomeFirstResponder];
+    
     if (geture.state == UIGestureRecognizerStateBegan) {
         [self becomeFirstResponder];
         self.bubbleLongPressBlock? self.bubbleLongPressBlock(self.bubbleView):nil;
@@ -351,14 +351,13 @@
         [self.nameLab setHidden:YES];
     }
     
+    [self.bubbleView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     // Bubble view
     UIImage * bubbleImage = self.bubbleImageCreateBlock();
     CGSize bubbleSize = [model.bubbleItem itemSize];
     UIView * itemView = [model.bubbleItem itemViewWithBubbleImage:bubbleImage];
     
     x = x - bubbleSize.width;
-    
-    [self.bubbleView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     itemView.frame = CGRectMake(0, 0, bubbleSize.width, bubbleSize.height);
     self.bubbleView.frame = CGRectMake(x, y, bubbleSize.width, bubbleSize.height);
     [self.bubbleView addSubview:itemView];

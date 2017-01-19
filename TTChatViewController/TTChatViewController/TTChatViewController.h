@@ -44,9 +44,13 @@
 -(void) bubbleLongPressAtIndex:(NSInteger)index bubbleView:(UIView *)bubbleView;
 
 -(void) textMessageDidAddWithText:(NSString*)text;
--(void) voiceMessageDidAddWithPath:(NSString*)path;
+-(void) imageMessageDidAdd:(UIImage*)image;
+-(void) voiceMessageDidAddWithPath:(NSString*)path duration:(CGFloat)duration;
 -(void) messageDidRemoveAtIndex:(NSInteger)index;
 
 -(void) loadMoreMessageWithDone:(void(^)(NSArray<TTBubbleCellModel*>* models))done;
+
+-(NSArray<TTMoreViewCellModel *> *)dataForMoreViewItems;
+-(void) moreViewItemDidTapWithTitle:(NSString*)t;
 
 @end

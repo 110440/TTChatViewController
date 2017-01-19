@@ -73,9 +73,6 @@
             [wSelf layoutIfNeeded];
             [wSelf callHeightToChange];
             [wSelf refleshBotton];
-            
-            wSelf.moreInputView.frame = CGRectMake(0, 0, wSelf.bounds.size.width, h);
-            [wSelf.moreInputView reloadData];
         };
         _keyBoardManager.animateWhenKeyboardDisappear = ^(CGFloat h){
             if(wSelf.curInputState != Emoji && wSelf.curInputState != More){
@@ -118,16 +115,18 @@
 -(TTMoreView *)moreInputView{
     if(!_moreInputView){
         _moreInputView =[[NSBundle bundleForClass:[self class]] loadNibNamed:@"TTMoreView" owner:nil options:nil].firstObject;
-        //_moreInputView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.bottomView addSubview:_moreInputView];
-        //[self.bottomView ex_pinAllEdgesOfSubview:_moreInputView];
         _moreInputView.frame = CGRectMake(0, 0, self.bounds.size.width, keyboradHeight);
-        
         __weak typeof(self) wSelf = self;
         _moreInputView.itemTapBlock = ^(NSString * title){
-            NSLog(@"tap:%@",title);
             [wSelf moveDown];
+            if(wSelf.delegate && [wSelf.delegate respondsToSelector:@selector(moreViewItemTapWithTitle:)]){
+                [wSelf.delegate moreViewItemTapWithTitle:title];
+            }
         };
+        if(self.delegate && [self.delegate respondsToSelector:@selector(moreViewItems)]){
+            _moreInputView.itemData = [self.delegate moreViewItems];
+        }
     }
     return _moreInputView;
 }
@@ -182,8 +181,10 @@
             _curInputState = More;
             self.emojiView.hidden = YES;
             self.moreInputView.hidden = NO;
-            [self.moreInputView layoutIfNeeded];
             [self moveUp];
+            CGFloat h = MAX(self.keyBoardManager.keyboardheight,keyboradHeight);
+            self.moreInputView.frame = CGRectMake(0, 0, self.bounds.size.width, h);
+            [self.moreInputView reloadData];
         }
     };
     
@@ -237,6 +238,7 @@
     if(self.keyBoardManager.isKeyboradShowNow){
         [self endEditing:YES]; // -> keyboardManager handle
     }else{
+
         [UIView animateWithDuration:0.3 delay:0 options:(UIViewAnimationOptionCurveEaseOut) animations:^{
             // 216 中文键盘会有两次高度改变，216 为小于等于第一次变化高度，这样总体变化是向上的动画，避免上下抖动
             CGFloat height = MAX(self.keyBoardManager.keyboardheight,keyboradHeight);

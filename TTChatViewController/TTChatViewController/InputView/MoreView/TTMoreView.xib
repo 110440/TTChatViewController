@@ -12,13 +12,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="193"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="O0t-kR-r6i">
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="o67-Ua-dos"/>
-                    </constraints>
-                    <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <color key="currentPageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                </pageControl>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KcS-be-PEQ">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qG8-Dz-Ira">
@@ -32,15 +25,20 @@
                         <outlet property="delegate" destination="-1" id="ics-sn-rnW"/>
                     </connections>
                 </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="O0t-kR-r6i">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </pageControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="O0t-kR-r6i" secondAttribute="trailing" id="Aq5-Fa-Zfk"/>
                 <constraint firstAttribute="bottom" secondItem="O0t-kR-r6i" secondAttribute="bottom" id="DXh-c1-Nhs"/>
-                <constraint firstItem="O0t-kR-r6i" firstAttribute="top" secondItem="KcS-be-PEQ" secondAttribute="bottom" id="ITf-bQ-vqE"/>
                 <constraint firstItem="O0t-kR-r6i" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kx7-UP-Kf7"/>
                 <constraint firstItem="KcS-be-PEQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lYT-Hh-qKQ"/>
                 <constraint firstAttribute="trailing" secondItem="KcS-be-PEQ" secondAttribute="trailing" id="rVk-bU-Ehp"/>
+                <constraint firstItem="O0t-kR-r6i" firstAttribute="top" secondItem="KcS-be-PEQ" secondAttribute="bottom" id="t5a-SK-Ze6"/>
                 <constraint firstItem="KcS-be-PEQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tEE-Ee-jbe"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

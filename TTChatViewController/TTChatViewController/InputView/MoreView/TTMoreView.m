@@ -24,30 +24,14 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     [self.collectionView registerNib:[UINib nibWithNibName:@"TTMoreViewPageCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
-    
-    _data = [self prePageData:[self moreData]];
-    _pageCtl.numberOfPages = _data.count;
-    _pageCtl.currentPage = 0;
-    [self.collectionView reloadData];
-}
-
--(NSArray*) moreData{
-    TTMoreViewCellModel * photo = [TTMoreViewCellModel new];
-    photo.title = @"相册";
-    photo.iconName = @"chat_more_pic";
-    TTMoreViewCellModel * camera = [TTMoreViewCellModel new];
-    camera.title = @"拍摄";
-    camera.iconName = @"chat_more_video";
-    TTMoreViewCellModel * video = [TTMoreViewCellModel new];
-    video.title = @"视频聊天";
-    video.iconName = @"chat_more_videovoip";
-    TTMoreViewCellModel * location = [TTMoreViewCellModel new];
-    location.title = @"位置";
-    location.iconName = @"chat_more_location";
-    return @[photo,camera,video,location];
 }
 
 -(void)reloadData{
+    if(!_data){
+        _data = [self prePageData:self.itemData];
+        _pageCtl.numberOfPages = _data.count;
+        _pageCtl.currentPage = 0;
+    }
     [self.collectionView reloadData];
 }
 

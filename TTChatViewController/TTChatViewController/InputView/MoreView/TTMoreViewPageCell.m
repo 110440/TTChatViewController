@@ -62,9 +62,6 @@
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    //CGSize size = collectionView.bounds.size;
-    //CGFloat w = (size.width - (hMargin * 2) - (moreViewColNum - 1) * colSpace)/moreViewColNum;
-    //CGFloat h = (size.height - (vMargin * 2) - (moreViewRowNum -1) * lineSpace)/moreViewRowNum;
     return  CGSizeMake(itemWidth, itemHeight);
 }
 
