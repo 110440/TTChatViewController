@@ -391,18 +391,27 @@
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     if (self.isMoreData && self.isLoading){
         self.isMoreData = NO;
-
+        
+        //TODO: 主线程更新
         __weak typeof(self) wSelf = self;
         [self loadMoreMessageWithDone:^(NSArray<TTBubbleCellModel *> *models) {
             if(models ){
                 if(models.count >= TTMessageNumPerPage){
                     wSelf.isMoreData = YES;
                 }
+                
                 [wSelf insertMessages:models];
                 [wSelf.tableView reloadData];
-                NSIndexPath * pathForVisable = [NSIndexPath indexPathForRow:models.count inSection:0];
-                CGRect rectForVisable = [wSelf.tableView rectForRowAtIndexPath:pathForVisable];
-                wSelf.tableView.contentOffset = CGPointMake(0, rectForVisable.origin.y-TTLoadingHeadHeight);
+                
+                __block CGFloat height = 0;
+                [models enumerateObjectsUsingBlock:^(TTBubbleCellModel *  obj, NSUInteger idx, BOOL *  stop) {
+                    height += [TTChatBubbleCell heightForCell:obj];
+                }];
+                CGPoint offset = wSelf.tableView.contentOffset;
+                offset.y += height;
+                //offset.y -= TTLoadingHeadHeight;
+                wSelf.tableView.contentOffset = offset;
+                [wSelf.tableView reloadData];
             }
             wSelf.tableView.contentInset = UIEdgeInsetsMake(-TTLoadingHeadHeight, 0, 0, 0);
             wSelf.isLoading = NO;
