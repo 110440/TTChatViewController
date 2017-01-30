@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomRecordShortVideoViewController">
+            <connections>
+                <outlet property="actionButton" destination="5ye-b4-dz8" id="Sbp-LX-MO8"/>
+                <outlet property="closeButton" destination="qlL-AW-KgY" id="DrP-0D-zDN"/>
+                <outlet property="preview" destination="gK6-dB-JZF" id="96V-0N-Mx1"/>
+                <outlet property="resetButton" destination="xX9-Sm-aTV" id="6Xx-gd-GVo"/>
+                <outlet property="sendButton" destination="IPk-18-zE0" id="ToU-T4-HmL"/>
+                <outlet property="swapButton" destination="E8q-Yo-TpV" id="sD4-Ex-uxa"/>
+                <outlet property="tipLab" destination="m29-o2-ds2" id="lmZ-ch-G7T"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gK6-dB-JZF" userLabel="preview">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xX9-Sm-aTV">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="重拍">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="onResetButton:" destination="-1" eventType="touchUpInside" id="Gpm-IJ-wzE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPk-18-zE0">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="发送">
+                                <color key="titleColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onSendButton:" destination="-1" eventType="touchUpInside" id="DWc-s7-XKc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ye-b4-dz8">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="D3j-Mj-zq4"/>
+                        <constraint firstAttribute="height" constant="60" id="nQ1-7t-MaR"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onActionUp:" destination="-1" eventType="touchUpInside" id="yDs-1U-aFb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-AW-KgY">
+                    <state key="normal" title="关闭">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onCloseButton:" destination="-1" eventType="touchUpInside" id="TNz-be-l7Q"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="轻按拍摄，长按录像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m29-o2-ds2">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8q-Yo-TpV">
+                    <state key="normal" title="切换"/>
+                    <connections>
+                        <action selector="onSwapButton:" destination="-1" eventType="touchUpInside" id="sy3-v6-QOK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qlL-AW-KgY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="3wQ-6e-2xC"/>
+                <constraint firstItem="m29-o2-ds2" firstAttribute="centerX" secondItem="5ye-b4-dz8" secondAttribute="centerX" id="8mM-c7-qof"/>
+                <constraint firstAttribute="trailing" secondItem="gK6-dB-JZF" secondAttribute="trailing" id="BS8-yz-dAT"/>
+                <constraint firstItem="xX9-Sm-aTV" firstAttribute="height" secondItem="5ye-b4-dz8" secondAttribute="height" id="Kwr-uN-kto"/>
+                <constraint firstAttribute="trailing" secondItem="E8q-Yo-TpV" secondAttribute="trailing" constant="20" id="SHA-ed-7hl"/>
+                <constraint firstItem="xX9-Sm-aTV" firstAttribute="centerY" secondItem="5ye-b4-dz8" secondAttribute="centerY" id="Tb6-IV-nDY"/>
+                <constraint firstItem="5ye-b4-dz8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="W6D-2d-pcO"/>
+                <constraint firstAttribute="bottom" secondItem="5ye-b4-dz8" secondAttribute="bottom" constant="60" id="Weg-rV-LEm"/>
+                <constraint firstItem="5ye-b4-dz8" firstAttribute="top" secondItem="m29-o2-ds2" secondAttribute="bottom" constant="40" id="b0T-iP-QzA"/>
+                <constraint firstItem="IPk-18-zE0" firstAttribute="width" secondItem="5ye-b4-dz8" secondAttribute="width" id="bTU-o2-ciJ"/>
+                <constraint firstItem="xX9-Sm-aTV" firstAttribute="leading" secondItem="5ye-b4-dz8" secondAttribute="leading" id="clo-yx-oHD"/>
+                <constraint firstItem="gK6-dB-JZF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ehv-4f-iJs"/>
+                <constraint firstAttribute="bottom" secondItem="gK6-dB-JZF" secondAttribute="bottom" id="fqs-p5-zyC"/>
+                <constraint firstItem="IPk-18-zE0" firstAttribute="leading" secondItem="5ye-b4-dz8" secondAttribute="leading" id="grl-4p-sg8"/>
+                <constraint firstItem="IPk-18-zE0" firstAttribute="height" secondItem="5ye-b4-dz8" secondAttribute="height" id="p94-dp-Wzb"/>
+                <constraint firstItem="IPk-18-zE0" firstAttribute="centerY" secondItem="5ye-b4-dz8" secondAttribute="centerY" id="rFW-xO-JK7"/>
+                <constraint firstItem="gK6-dB-JZF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tcK-1I-YcL"/>
+                <constraint firstItem="qlL-AW-KgY" firstAttribute="centerY" secondItem="5ye-b4-dz8" secondAttribute="centerY" id="wwk-t3-i8n"/>
+                <constraint firstItem="E8q-Yo-TpV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="xCP-4Q-DB0"/>
+                <constraint firstItem="xX9-Sm-aTV" firstAttribute="width" secondItem="5ye-b4-dz8" secondAttribute="width" id="zUp-cO-RwF"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

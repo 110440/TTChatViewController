@@ -7,6 +7,7 @@
 
 #import "TTChatViewController.h"
 #import "CameraHelper.h"
+#import "CustomRecordShortVideoViewController.h"
 
 #define BGColor [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1]
 
@@ -184,7 +185,7 @@
     camera.title = @"拍摄";
     camera.iconName = @"chat_more_video";
     TTMoreViewCellModel * video = [TTMoreViewCellModel new];
-    video.title = @"视频聊天";
+    video.title = @"小视频";
     video.iconName = @"chat_more_videovoip";
     TTMoreViewCellModel * location = [TTMoreViewCellModel new];
     location.title = @"位置";
@@ -257,6 +258,7 @@
 -(void)messageDidRemoveAtIndex:(NSInteger)index{}
 
 -(void)textMessageDidAddWithText:(NSString*)text{
+    if(text.length <= 0)return;
     id<BubbleItemProtocol>  item = [[BubbleTextItem alloc] initWithText:text];
     TTBubbleCellModel * model = [[TTBubbleCellModel alloc] initWithDisplayName:self.displayName
                                                                           date:[NSDate date]
@@ -290,16 +292,36 @@
     done(nil);
 }
 
+-(void)videoMessageDidAddWithURL:(NSURL *)url{
+    
+    id<BubbleItemProtocol>  item = [[BubbleVideoItem alloc] initWithVideoPath:[url path]];
+    TTBubbleCellModel * model = [[TTBubbleCellModel alloc] initWithDisplayName:self.displayName
+                                                                          date:[NSDate date]
+                                                                    bubbleItem:item
+                                                                    isOutgoing:YES];
+    [self appendMessage:model];
+    [self appendMessageFinish];
+}
+
 -(void) moreViewItemDidTapWithTitle:(NSString*)t{
     if([t isEqualToString:@"拍摄"]){
-        [[CameraHelper helper] showPickerViewControllerSourceType:UIImagePickerControllerSourceTypeCamera
+        CameraHelper * cameraHelper = [CameraHelper helper];
+        cameraHelper.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+        [cameraHelper showPickerViewControllerSourceType:UIImagePickerControllerSourceTypeCamera
                                                  onViewController:self
-                                                       completion:^(MediaType mediaType, NSData *data) {
-                                                           if(data){
-                                                               UIImage * image = [UIImage imageWithData:data];
+                                                       completion:^(MediaType mediaType, UIImage *image ,NSURL * url) {
+                                                           if(mediaType==MediaTypePhoto && image){
                                                                [self imageMessageDidAdd:image];
                                                            }
         }];
+    }else if([t isEqualToString:@"小视频"]){
+
+        CustomRecordShortVideoViewController * shortVideo = [[CustomRecordShortVideoViewController alloc] initWithNibName:@"CustomRecordShortVideoViewController" bundle:nil];
+        shortVideo.complateHandel = ^(NSString *path){
+            NSURL * videoURL = [NSURL fileURLWithPath:path];
+            [self videoMessageDidAddWithURL:videoURL];
+        };
+        [self presentViewController:shortVideo animated:YES completion:nil];
     }
 }
 

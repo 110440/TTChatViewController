@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDE3E3639D538E0ED5B33F52 /* libPods-TTChatViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03AA42C8F016E6C9BF73560D /* libPods-TTChatViewController.a */; };
 		D405BF1A1E23486F00E4743A /* AddressBookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D405BF191E23486F00E4743A /* AddressBookHelper.m */; };
 		D407A7AF1E21E28D0089F7CB /* EmojiPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D407A7AD1E21E28D0089F7CB /* EmojiPageCell.m */; };
 		D407A7B01E21E28D0089F7CB /* EmojiPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D407A7AE1E21E28D0089F7CB /* EmojiPageCell.xib */; };
@@ -36,6 +37,9 @@
 		D4111B841DFC3CE700528491 /* VoiceRecordHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4111B7E1DFC3CE700528491 /* VoiceRecordHelper.m */; };
 		D413C91B1DFD31D200407258 /* RecordIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D413C9191DFD31D200407258 /* RecordIndicatorView.m */; };
 		D413C91C1DFD31D200407258 /* RecordIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D413C91A1DFD31D200407258 /* RecordIndicatorView.xib */; };
+		D4185F3F1E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4185F3D1E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.m */; };
+		D4185F401E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4185F3E1E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.xib */; };
+		D42066331E3E1CBD0071CFF9 /* UISectorProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D42066321E3E1CBD0071CFF9 /* UISectorProgressView.m */; };
 		D4850F1B1E211D9D007CE9EB /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = D4850F1A1E211D9D007CE9EB /* emoji.json */; };
 		D4CFA13C1DFBCF5A00878B62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA13B1DFBCF5A00878B62 /* main.m */; };
 		D4CFA13F1DFBCF5A00878B62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFA13E1DFBCF5A00878B62 /* AppDelegate.m */; };
@@ -61,6 +65,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03AA42C8F016E6C9BF73560D /* libPods-TTChatViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TTChatViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		652DBD95B6036CA2D5EEBE81 /* Pods-TTChatViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTChatViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-TTChatViewController/Pods-TTChatViewController.release.xcconfig"; sourceTree = "<group>"; };
+		C5962930825E545EE90285A7 /* Pods-TTChatViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTChatViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TTChatViewController/Pods-TTChatViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		D405BF181E23486F00E4743A /* AddressBookHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookHelper.h; sourceTree = "<group>"; };
 		D405BF191E23486F00E4743A /* AddressBookHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookHelper.m; sourceTree = "<group>"; };
 		D407A7AC1E21E28D0089F7CB /* EmojiPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiPageCell.h; sourceTree = "<group>"; };
@@ -113,6 +120,11 @@
 		D413C9181DFD31D200407258 /* RecordIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordIndicatorView.h; sourceTree = "<group>"; };
 		D413C9191DFD31D200407258 /* RecordIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordIndicatorView.m; sourceTree = "<group>"; };
 		D413C91A1DFD31D200407258 /* RecordIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordIndicatorView.xib; sourceTree = "<group>"; };
+		D4185F3C1E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRecordShortVideoViewController.h; sourceTree = "<group>"; };
+		D4185F3D1E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomRecordShortVideoViewController.m; sourceTree = "<group>"; };
+		D4185F3E1E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomRecordShortVideoViewController.xib; sourceTree = "<group>"; };
+		D42066311E3E1CBD0071CFF9 /* UISectorProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISectorProgressView.h; sourceTree = "<group>"; };
+		D42066321E3E1CBD0071CFF9 /* UISectorProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISectorProgressView.m; sourceTree = "<group>"; };
 		D4850F1A1E211D9D007CE9EB /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji.json; sourceTree = "<group>"; };
 		D4CFA1371DFBCF5A00878B62 /* TTChatViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTChatViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CFA13B1DFBCF5A00878B62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -161,12 +173,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE3E3639D538E0ED5B33F52 /* libPods-TTChatViewController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80455E3E234B3743D085D091 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03AA42C8F016E6C9BF73560D /* libPods-TTChatViewController.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B13ECAF4911BA730162C8FDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5962930825E545EE90285A7 /* Pods-TTChatViewController.debug.xcconfig */,
+				652DBD95B6036CA2D5EEBE81 /* Pods-TTChatViewController.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D405BF171E23486F00E4743A /* AddressBookHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,11 +318,32 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		D4185F3B1E3F4EFB00E3CCEC /* PKShortVideoCustom */ = {
+			isa = PBXGroup;
+			children = (
+				D4185F3C1E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.h */,
+				D4185F3D1E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.m */,
+				D4185F3E1E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.xib */,
+			);
+			path = PKShortVideoCustom;
+			sourceTree = "<group>";
+		};
+		D42066301E3E1CBD0071CFF9 /* UISectorProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				D42066311E3E1CBD0071CFF9 /* UISectorProgressView.h */,
+				D42066321E3E1CBD0071CFF9 /* UISectorProgressView.m */,
+			);
+			path = UISectorProgressView;
+			sourceTree = "<group>";
+		};
 		D4CFA12E1DFBCF5A00878B62 = {
 			isa = PBXGroup;
 			children = (
 				D4CFA1391DFBCF5A00878B62 /* TTChatViewController */,
 				D4CFA1381DFBCF5A00878B62 /* Products */,
+				B13ECAF4911BA730162C8FDA /* Pods */,
+				80455E3E234B3743D085D091 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -363,6 +414,8 @@
 		D4CFA1601DFBD6BB00878B62 /* Vonder */ = {
 			isa = PBXGroup;
 			children = (
+				D4185F3B1E3F4EFB00E3CCEC /* PKShortVideoCustom */,
+				D42066301E3E1CBD0071CFF9 /* UISectorProgressView */,
 				D40EC2B21DFD0D4B0096AE96 /* RecordButton */,
 				D4CFA1801DFBF40900878B62 /* JSQTextView */,
 				D4CFA1831DFBF40900878B62 /* StateButtom */,
@@ -433,9 +486,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4CFA14E1DFBCF5A00878B62 /* Build configuration list for PBXNativeTarget "TTChatViewController" */;
 			buildPhases = (
+				D7A3F8FB01AB5E13DD953A88 /* [CP] Check Pods Manifest.lock */,
 				D4CFA1331DFBCF5A00878B62 /* Sources */,
 				D4CFA1341DFBCF5A00878B62 /* Frameworks */,
 				D4CFA1351DFBCF5A00878B62 /* Resources */,
+				486C5FA89EF8812765491D99 /* [CP] Embed Pods Frameworks */,
+				62EEE3B8BF9F04626E407B25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -490,6 +546,7 @@
 				D407A7B01E21E28D0089F7CB /* EmojiPageCell.xib in Resources */,
 				D4850F1B1E211D9D007CE9EB /* emoji.json in Resources */,
 				D4CFA14A1DFBCF5A00878B62 /* LaunchScreen.storyboard in Resources */,
+				D4185F401E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.xib in Resources */,
 				D409E0801E2E021800F939FC /* TTMoreViewCell.xib in Resources */,
 				D409E0821E2E021800F939FC /* TTMoreViewPageCell.xib in Resources */,
 				D407A7BA1E21E8050089F7CB /* EmojiView.xib in Resources */,
@@ -503,16 +560,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		486C5FA89EF8812765491D99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TTChatViewController/Pods-TTChatViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62EEE3B8BF9F04626E407B25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TTChatViewController/Pods-TTChatViewController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7A3F8FB01AB5E13DD953A88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4CFA1331DFBCF5A00878B62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D4CFA1781DFBD6BB00878B62 /* KeyboardManager.m in Sources */,
+				D4185F3F1E3F4F3C00E3CCEC /* CustomRecordShortVideoViewController.m in Sources */,
 				D4CFA1861DFBF40900878B62 /* JSQMessagesComposerTextView.m in Sources */,
 				D4111B801DFC3CE700528491 /* CameraHelper.m in Sources */,
 				D410536D1DFE4E1400E65C61 /* BubbleVideoItem.m in Sources */,
 				D410536C1DFE4E1400E65C61 /* BubbleTextItem.m in Sources */,
+				D42066331E3E1CBD0071CFF9 /* UISectorProgressView.m in Sources */,
 				D409E07D1E2E021800F939FC /* TTMoreView.m in Sources */,
 				D40EC2B51DFD0D990096AE96 /* TTRecordButton.m in Sources */,
 				D4CFA1871DFBF40900878B62 /* StateButtom.m in Sources */,
@@ -661,6 +768,7 @@
 		};
 		D4CFA14F1DFBCF5A00878B62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5962930825E545EE90285A7 /* Pods-TTChatViewController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6NKY5M245W;
@@ -674,6 +782,7 @@
 		};
 		D4CFA1501DFBCF5A00878B62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 652DBD95B6036CA2D5EEBE81 /* Pods-TTChatViewController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6NKY5M245W;

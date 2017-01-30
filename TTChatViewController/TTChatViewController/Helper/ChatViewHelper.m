@@ -13,8 +13,8 @@
 
 @implementation ChatViewHelper
 
-+ (CGSize) getFitSizeByOriginSize:(CGSize)size {
-    CGSize maxSize =  CGSizeMake(150, 150);
++ (CGSize) getFitSizeByOriginSize:(CGSize)size maxSize:(CGSize)maxSize {
+    
     if(size.width <= maxSize.width && size.height <= maxSize.height){
         return size;
     }

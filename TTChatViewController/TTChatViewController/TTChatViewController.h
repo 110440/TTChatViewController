@@ -47,6 +47,7 @@
 -(void) imageMessageDidAdd:(UIImage*)image;
 -(void) voiceMessageDidAddWithPath:(NSString*)path duration:(CGFloat)duration;
 -(void) messageDidRemoveAtIndex:(NSInteger)index;
+-(void) videoMessageDidAddWithURL:(NSURL*)url;
 
 -(void) loadMoreMessageWithDone:(void(^)(NSArray<TTBubbleCellModel*>* models))done;
 

@@ -9,12 +9,12 @@ typedef NS_ENUM(NSInteger, MediaType) {
     
 } ;
 
-typedef void(^DidFinishTakeMediaCompletionBlock)(MediaType mediaType, NSData *data);
+typedef void(^DidFinishTakeMediaCompletionBlock)(MediaType mediaType, UIImage *image , NSURL * url);
 
 @interface CameraHelper : NSObject
+@property(nonatomic) UIImagePickerControllerCameraCaptureMode cameraCaptureMode;
 
 + (instancetype)helper;
-
 
 - (void)showPickerViewControllerSourceType:(UIImagePickerControllerSourceType)sourceType onViewController:(UIViewController *)viewController completion:(DidFinishTakeMediaCompletionBlock)completion;
 

@@ -11,7 +11,7 @@
 
 @interface ChatViewHelper : NSObject
 
-+ (CGSize) getFitSizeByOriginSize:(CGSize)size;
++ (CGSize) getFitSizeByOriginSize:(CGSize)size maxSize:(CGSize)maxSize;
 + (void) afterWihtSEC:(CGFloat)s block:(void (^)()) block;
 + (NSString *) chat_stringForDate:(NSDate *)date;
 @end

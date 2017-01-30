@@ -14,5 +14,6 @@
 @property(nonatomic,assign) BOOL isOutgoing;
 
 -(instancetype)initWithVideoPath:(NSString*)path;
+-(instancetype)initWihtVideoURLPath:(NSString*)urlPath imageURLPath:(UIImage*)imagePath size:(CGSize)size;
 
 @end

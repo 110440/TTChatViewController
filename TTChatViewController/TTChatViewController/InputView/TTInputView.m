@@ -127,6 +127,7 @@
         if(self.delegate && [self.delegate respondsToSelector:@selector(moreViewItems)]){
             _moreInputView.itemData = [self.delegate moreViewItems];
         }
+        _moreInputView.autoresizingMask = UIViewAutoresizingNone;
     }
     return _moreInputView;
 }
@@ -222,6 +223,9 @@
             self.bottomViewHeightConstraint.constant = 0;
             [self layoutIfNeeded];
             [self callHeightToChange];
+        } completion:^(BOOL finished) {
+            self.emojiView.hidden = YES;
+            self.moreInputView.hidden = YES;
         }];
     }
     [self refleshBotton];

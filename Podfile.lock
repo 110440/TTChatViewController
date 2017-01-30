@@ -1,0 +1,17 @@
+PODS:
+  - PKShortVideo (0.9.4)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+
+DEPENDENCIES:
+  - PKShortVideo
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  PKShortVideo: 201c2c166ede4b52e915a79f5148483903b7b2b3
+  SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
+
+PODFILE CHECKSUM: 35823bfa9aa55d28fedd02fff3801fe89db7c877
+
+COCOAPODS: 1.1.1

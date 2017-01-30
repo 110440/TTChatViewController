@@ -35,7 +35,7 @@
 }
 
 -(instancetype)initWithURLString:(NSString *)url size:(CGSize)size{
-    CGSize fitSize = [ChatViewHelper getFitSizeByOriginSize:size];
+    CGSize fitSize = [ChatViewHelper getFitSizeByOriginSize:size maxSize:CGSizeMake(150, 150)];
     if([super init]){
         self.image = [UIImage imageWithColor:[UIColor lightGrayColor] size:fitSize];
         self.imageSize = size;
@@ -76,7 +76,7 @@
 // protocol
 -(CGSize)itemSize{
     if(CGSizeEqualToSize(_itemSize, CGSizeZero)){
-        _itemSize = [ChatViewHelper getFitSizeByOriginSize:self.imageSize];
+        _itemSize = [ChatViewHelper getFitSizeByOriginSize:self.imageSize maxSize:CGSizeMake(150, 150)];
     }
     return _itemSize;
 }
